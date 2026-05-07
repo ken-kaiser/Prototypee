@@ -60,8 +60,8 @@ function renderProducts() {
       <div class="product-img-wrap relative">
         ${badgeHtml}
         <img src="${p.img}" alt="${p.name}" loading="lazy">
-        <button onclick="toggleWish(${p.id})" class="heart-btn absolute top-3 right-3 z-10 ${inWish ? 'active' : ''}" style="background:none;border:none;font-size:20px">
-          ${inWish ? '❤️' : '🤍'}
+        <button onclick="toggleWish(${p.id})" class="heart-btn absolute top-3 right-3 z-10 ${inWish ? 'active' : ''}" style="background:none;border:none">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="${inWish ? '#E11D48' : 'none'}" stroke="${inWish ? '#E11D48' : '#9CA3AF'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
       </div>
       <div class="p-4">
@@ -258,7 +258,7 @@ function openQuickView(id) {
       <div class="flex gap-3">
         <button onclick="addToCart(${p.id});closeQuickView()" class="btn-primary flex-1">Add to Cart</button>
         <button onclick="toggleWish(${p.id})" class="btn-ghost" style="padding:12px 16px">
-          ${wishlist.includes(p.id) ? '❤️' : '🤍'}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="${wishlist.includes(p.id) ? '#E11D48' : 'none'}" stroke="${wishlist.includes(p.id) ? '#E11D48' : '#9CA3AF'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
       </div>
     </div>
