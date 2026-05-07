@@ -60,11 +60,11 @@ function renderProducts() {
       <div class="product-img-wrap relative">
         ${badgeHtml}
         <img src="${p.img}" alt="${p.name}" loading="lazy">
-        <button onclick="toggleWish(${p.id})" class="heart-btn absolute top-3 right-3 z-10 ${inWish ? 'active' : ''}" style="background:none;border:none">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="${inWish ? '#E11D48' : 'none'}" stroke="${inWish ? '#E11D48' : '#9CA3AF'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <button onclick="toggleWish(${p.id})" class="heart-btn absolute top-3 right-3 z-10 ${inWish ? 'active' : ''}" style="background:#fff;border:none;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(255, 255, 255, 0.1)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="${inWish ? '#e83d3dff' : 'none'}" stroke="${inWish ? '#e83d3dff' : '#9CA3AF'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
       </div>
-      <div class="p-4">
+      <div class="p-4">         
         <p class="text-[10px] font-semibold text-gray-300 uppercase tracking-wider mb-1">${p.cat}</p>
         <h3 class="text-sm font-semibold text-gray-900 mb-1 truncate">${p.name}</h3>
         <p class="text-xs text-gray-400 mb-3">${p.specs}</p>
