@@ -603,7 +603,7 @@ h6 {
 
 .payment-card.active {
   border-color: var(--accent);
-  background: #FFF1F2;
+  background: #ECEBFF;
 }
 
 .payment-card input[name="payment"] {
