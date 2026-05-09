@@ -8,8 +8,8 @@
   --border: #E2E8F0;
   --text-main: #0F172A;
   --text-muted: #64748B;
-  --accent: #E11D48;
-  --accent-hover: #BE123C;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
 }
 
 *,
@@ -110,7 +110,7 @@ h6 {
 
 .nav-link:hover,
 .nav-link.active {
-  background: #FFF1F2;
+  background: #ecebff;
   color: var(--accent);
 }
 
@@ -168,7 +168,7 @@ h6 {
 
 .search-bar:focus-within {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .search-bar input {
@@ -238,7 +238,7 @@ h6 {
 .btn-primary:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
 .btn-secondary {
@@ -374,7 +374,7 @@ h6 {
 .category-card:hover,
 .category-card.active {
   border-color: var(--accent);
-  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.05);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.05);
   transform: translateY(-4px);
 }
 
@@ -393,7 +393,7 @@ h6 {
 
 .category-card:hover .category-icon,
 .category-card.active .category-icon {
-  background: #FFF1F2;
+  background: #ECEBFF;
   color: var(--accent);
 }
 
@@ -581,7 +581,7 @@ h6 {
 
 .form-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   background: #fff;
 }
 

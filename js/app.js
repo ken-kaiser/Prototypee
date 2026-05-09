@@ -61,7 +61,7 @@ function renderProducts() {
             const pct = Math.round((1 - p.price / p.oldPrice) * 100);
             badgeHtml = `<span class="badge-sale">-${pct}%</span>`;
         } else if (p.badge === 'new') {
-            badgeHtml = `<span class="badge-sale bg-blue-600">New</span>`;
+            badgeHtml = `<span class="badge-sale bg-slate-900">New</span>`;
         }
 
         return `
@@ -91,7 +91,7 @@ function renderProducts() {
             ${p.oldPrice ? `<p class="text-xs text-slate-400 line-through">${fmt(p.oldPrice)}</p>` : ''}
             <p class="text-base font-bold text-slate-800">${fmt(p.price)}</p>
           </div>
-          <button onclick="addToCart(${p.id})" class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-rose-600 transition shadow-md">
+          <button onclick="addToCart(${p.id})" class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-indigo-600 transition shadow-md">
             <i class="fa-solid fa-plus text-[12px]"></i>
           </button>
         </div>
@@ -181,9 +181,9 @@ function renderCart() {
         <div>
           <div class="flex justify-between items-start">
             <h4 class="text-sm font-bold text-slate-900 truncate pr-2">${p.name}</h4>
-            <button onclick="removeFromCart(${p.id})" class="text-slate-300 hover:text-rose-500 transition"><i class="fa-solid fa-trash-can"></i></button>
+            <button onclick="removeFromCart(${p.id})" class="text-slate-300 hover:text-indigo-500 transition"><i class="fa-solid fa-trash-can"></i></button>
           </div>
-          <p class="text-xs font-bold text-rose-600 mt-1">${fmt(p.price)}</p>
+          <p class="text-xs font-bold text-indigo-600 mt-1">${fmt(p.price)}</p>
         </div>
         <div class="flex items-center gap-3 mt-2">
           <div class="flex items-center border border-slate-200 rounded-md">
@@ -228,9 +228,9 @@ function renderNotifications() {
     }
 
     container.innerHTML = notifications.map(n => `
-        <div class="p-4 rounded-xl border transition ${n.read ? 'border-slate-100 bg-white' : 'border-rose-100 bg-rose-50'}">
+        <div class="p-4 rounded-xl border transition ${n.read ? 'border-slate-100 bg-white' : 'border-indigo-100 bg-indigo-50'}">
             <div class="flex justify-between items-start mb-1">
-                <h4 class="text-sm font-bold ${n.read ? 'text-slate-900' : 'text-rose-700'}">${n.title}</h4>
+                <h4 class="text-sm font-bold ${n.read ? 'text-slate-900' : 'text-indigo-700'}">${n.title}</h4>
                 <span class="text-[10px] font-semibold text-slate-400">${n.time}</span>
             </div>
             <p class="text-xs text-slate-600">${n.msg}</p>
@@ -353,11 +353,11 @@ function renderWishlist() {
       <img src="${p.img}" class="w-16 h-16 object-cover rounded-lg">
       <div class="flex-1 min-w-0">
         <h4 class="text-sm font-bold text-slate-900 truncate">${p.name}</h4>
-        <p class="text-xs text-rose-600 font-bold">${fmt(p.price)}</p>
+        <p class="text-xs text-indigo-600 font-bold">${fmt(p.price)}</p>
       </div>
       <div class="flex flex-col gap-2">
-        <button onclick="addToCart(${p.id})" class="text-xs font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md hover:bg-rose-600 transition">Add</button>
-        <button onclick="toggleWish(${p.id})" class="text-xs text-slate-400 hover:text-rose-500">Remove</button>
+        <button onclick="addToCart(${p.id})" class="text-xs font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md hover:bg-indigo-600 transition">Add</button>
+        <button onclick="toggleWish(${p.id})" class="text-xs text-slate-400 hover:text-indigo-500">Remove</button>
       </div>
     </div>`;
     }).join('');
@@ -414,7 +414,7 @@ function resetCarouselTimer() {
 function showToast(msg, type = 'success') {
     const container = document.getElementById('toast-container');
     if (!container) return;
-    const icon = type === 'success' ? '<i class="fa-solid fa-check text-emerald-500 bg-emerald-100 p-1.5 rounded-full text-[10px]"></i>' : '<i class="fa-solid fa-circle-exclamation text-rose-500 bg-rose-100 p-1.5 rounded-full text-[10px]"></i>';
+    const icon = type === 'success' ? '<i class="fa-solid fa-check text-emerald-500 bg-emerald-100 p-1.5 rounded-full text-[10px]"></i>' : '<i class="fa-solid fa-circle-exclamation text-indigo-500 bg-indigo-100 p-1.5 rounded-full text-[10px]"></i>';
 
     const toast = document.createElement('div');
     toast.className = 'toast';
